@@ -1,8 +1,11 @@
 import React from "react"
 
-const CountriesFacts = ({selectedCountry}) => {
+const CountriesFacts = ({selectedCountry, saveFavourite}) => {
 
-   
+    const handleButton = function() {
+        saveFavourite(selectedCountry)
+           
+    }
 
     return(
         <>
@@ -24,8 +27,10 @@ const CountriesFacts = ({selectedCountry}) => {
                     
                     <img  id="arms-img" src={selectedCountry.coatOfArms.svg} alt='coat of arms'/>
                 </div> 
+                <button onClick={handleButton} > &hearts;</button> 
             </div> 
 
+            
 
         </div>
         </>
