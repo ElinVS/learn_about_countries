@@ -1,10 +1,10 @@
 import React from "react"
 
 
-const CountrySelect = ({countries, onCountriesSelect, saveFavourite}) => {
+const CountrySelect = ({countries, onCountriesSelect}) => {
 
     const countriesArray = countries.map((country,index)=>{
-        return <option value={index} onCountriesSelect={onCountriesSelect}saveFavourite={saveFavourite}>{country.name.common} </option>
+        return <option value={index} onCountriesSelect={onCountriesSelect}>{country.name.common}</option>
     })
 
     const handleChange = (event) => {
@@ -13,22 +13,18 @@ const CountrySelect = ({countries, onCountriesSelect, saveFavourite}) => {
         onCountriesSelect((selectedCountry))
     }
 
-
     return(
         <>
-            <form onChange={handleChange}>
+            <form onChange={handleChange} >
                 <label for="country"></label>
                 <select className="drop-down"  name="country">
-                <option value="" selected> Choose a Country</option>
+                <option value=""> Choose a Country</option>
                     {countriesArray}
                 </select>
             </form>
-            
         </>
     )
 }
-
-
 
 
 export default CountrySelect

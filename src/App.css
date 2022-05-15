@@ -3,6 +3,7 @@ body {
   background-image: url('/public/images/layered_maps.jpg');
   background-size: cover auto;
   background-repeat: no-repeat;
+  background-attachment: fixed ;
 }
 
 header {
@@ -18,6 +19,18 @@ header h2 {
   margin-left: 40px;
 }
 
+h2 {
+  animation-duration: 3s;
+  animation-name: slidein;
+}
+
+@keyframes slidein {
+  from {
+    margin-top: 100%;
+    width: 300%;
+  }
+}
+
 .container {
   width:800px;
   height: 500px;
@@ -26,7 +39,8 @@ header h2 {
   left:50%;
   transform: translate(-50%, -50%);
   cursor:pointer;
-  margin-top: 80px;
+  margin-top: 90px;
+  /* margin-bottom: 1000px; */
 }
 
 .center {
@@ -44,7 +58,7 @@ header h2 {
   backface-visibility: hidden;
   transition: all 0.5s;
   overflow: hidden;
-  border-radius: 30px;
+  /* border-radius: 30px; */
 }
 
 .container:hover .front{
@@ -76,9 +90,9 @@ header h2 {
   white-space: nowrap;
   list-style: none;
   color: white;
-  font-family: 'Gentium Book Basic', serif;
+  font-family: 'Merriweather', serif;
   font-size: 20px;
-  border-radius: 30px;
+  /* border-radius: 10px; */
   border:1px solid #121212
 }
 
@@ -94,6 +108,7 @@ header h2 {
 #arms-img {
   width:200px;
   height:200px;
+  margin-top: 10px;
 }
 
 .drop-down{
@@ -104,6 +119,8 @@ header h2 {
   font-size: medium;
   border-radius: 10px;
 }
+
+#map { height: 180px; }
 
 
 
